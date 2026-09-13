@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Questbound — A fantasy-themed life RPG that turns real-world habits into quests",
+  "workspaces": [
+    "apps/web"
+  ],
   "scripts": {
     "dev": "npm --prefix apps/web run dev",
     "build": "npm --prefix apps/web run build",
