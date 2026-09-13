@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '../features/auth/AuthContext';
-import { supabase, localDb, isSupabaseConfigured } from '../lib/supabase';
+import { supabase, localDb } from '../lib/supabase';
 import { Quest, RewardSummary } from '../lib/types';
 import { QuestFormData, questSchema } from '../lib/validation';
 import { useAnnounce } from '../components/Announcer';

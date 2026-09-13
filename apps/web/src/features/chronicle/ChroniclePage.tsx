@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useAuth } from '../auth/AuthContext';
 import { supabase, localDb } from '../../lib/supabase';
 import { GoldLedgerEntry, QuestCompletion } from '../../lib/types';
-import { Calendar, History, TrendingUp, Award, Coins, ArrowUpRight, ArrowDownLeft } from 'lucide-react';
+import { Calendar, History, Coins, ArrowUpRight, ArrowDownLeft } from 'lucide-react';
 
 export const ChroniclePage: React.FC = () => {
   const { user, isDemoMode } = useAuth();

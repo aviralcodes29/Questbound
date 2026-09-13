@@ -8,8 +8,6 @@ import {
   InventoryItem,
   GoldLedgerEntry,
   RewardSummary,
-  QuestCategory,
-  QuestDifficulty,
 } from './types';
 import { getRewardsForDifficulty, getAttributeForCategory, calculateRequiredXp } from './rpg';
 
@@ -264,9 +262,11 @@ class LocalDatabase {
 
   private load(): LocalDatabaseState {
     try {
-      const data = localStorage.getItem(STORAGE_KEY);
-      if (data) {
-        return JSON.parse(data);
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const data = window.localStorage.getItem(STORAGE_KEY);
+        if (data) {
+          return JSON.parse(data);
+        }
       }
     } catch (e) {
       console.error('Failed to load local DB', e);
@@ -279,7 +279,9 @@ class LocalDatabase {
   private save(state: LocalDatabaseState): void {
     try {
       this.state = state;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
     } catch (e) {
       console.error('Failed to save local DB', e);
     }

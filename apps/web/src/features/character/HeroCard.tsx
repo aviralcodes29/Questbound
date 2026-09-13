@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth } from '../auth/AuthContext';
 import { calculateLevelFromTotalXp, getRankTitle } from '../../lib/rpg';
 import { ProgressBar } from '../../components/ProgressBar';
-import { Shield, Sparkles, Award, Zap } from 'lucide-react';
+import { Award, Zap } from 'lucide-react';
 
 export const HeroCard: React.FC = () => {
   const { profile, equippedBadge, equippedFrame } = useAuth();

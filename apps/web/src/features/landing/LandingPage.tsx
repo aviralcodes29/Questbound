@@ -7,12 +7,8 @@ import {
   Shield,
   Sparkles,
   Zap,
-  Award,
   Scroll,
   ArrowRight,
-  Flame,
-  CheckCircle,
-  Lock,
 } from 'lucide-react';
 
 export const LandingPage: React.FC = () => {

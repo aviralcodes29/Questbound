@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { useAuth } from '../features/auth/AuthContext';
-import { Shield, Flame, Coins, Volume2, VolumeX, LogOut, User, Sparkles } from 'lucide-react';
+import { Shield, Flame, Coins, Volume2, VolumeX, LogOut, Sparkles } from 'lucide-react';
 import { sound } from '../lib/sound';
 
-interface TopBarProps {
-  onOpenProfile?: () => void;
-}
-
-export const TopBar: React.FC<TopBarProps> = () => {
+export const TopBar: React.FC = () => {
   const { profile, signOut, isDemoMode } = useAuth();
   const [isMuted, setIsMuted] = useState(sound.getMuted());
   const [menuOpen, setMenuOpen] = useState(false);

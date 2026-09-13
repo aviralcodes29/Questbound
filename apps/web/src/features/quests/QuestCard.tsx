@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Quest } from '../../lib/types';
-import { getRewardsForDifficulty, getAttributeForCategory } from '../../lib/rpg';
+import { getRewardsForDifficulty } from '../../lib/rpg';
 import {
   Code,
   GraduationCap,

@@ -7,7 +7,7 @@ import { sound } from '../../lib/sound';
 
 export const AuthPage: React.FC = () => {
   const navigate = useNavigate();
-  const { signIn, signUp, enterDemoMode, isDemoMode } = useAuth();
+  const { signIn, signUp, enterDemoMode } = useAuth();
 
   const [mode, setMode] = useState<'login' | 'signup'>('login');
   const [email, setEmail] = useState('');

@@ -7,12 +7,14 @@ class SoundEngine {
 
   constructor() {
     // Load mute preference
-    const saved = localStorage.getItem('questbound_muted');
-    this.isMuted = saved === 'true';
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const saved = window.localStorage.getItem('questbound_muted');
+      this.isMuted = saved === 'true';
+    }
   }
 
   private getContext(): AudioContext | null {
-    if (this.isMuted) return null;
+    if (this.isMuted || typeof window === 'undefined') return null;
     try {
       if (!this.ctx) {
         const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
@@ -31,7 +33,9 @@ class SoundEngine {
 
   public toggleMute(): boolean {
     this.isMuted = !this.isMuted;
-    localStorage.setItem('questbound_muted', String(this.isMuted));
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.setItem('questbound_muted', String(this.isMuted));
+    }
     return this.isMuted;
   }
 

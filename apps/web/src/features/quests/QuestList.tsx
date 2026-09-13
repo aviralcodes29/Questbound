@@ -3,7 +3,7 @@ import { useQuests } from '../../hooks/useQuests';
 import { QuestCard } from './QuestCard';
 import { QuestModal } from './QuestModal';
 import { DeleteConfirmModal } from './DeleteConfirmModal';
-import { Quest, QuestCategory, RewardSummary } from '../../lib/types';
+import { Quest, RewardSummary } from '../../lib/types';
 import { QuestFormData } from '../../lib/validation';
 import { Skeleton } from '../../components/Skeleton';
 import { Button } from '../../components/Button';

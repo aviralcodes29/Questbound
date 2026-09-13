@@ -54,7 +54,6 @@ export const LevelUpModal: React.FC<LevelUpModalProps> = ({
 
   if (!isOpen) return null;
 
-  const oldRank = getRankTitle(oldLevel);
   const newRank = getRankTitle(newLevel);
 
   return (

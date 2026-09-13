@@ -9,11 +9,11 @@ import { ShopPage } from '../features/shop/ShopPage';
 import { ChroniclePage } from '../features/chronicle/ChroniclePage';
 import { RewardSummary } from '../lib/types';
 import { useAuth } from '../features/auth/AuthContext';
-import { Scroll, User, Store, BookMarked, Sparkles } from 'lucide-react';
+import { Scroll, User, Store, BookMarked } from 'lucide-react';
 import { sound } from '../lib/sound';
 
 export const DashboardPage: React.FC = () => {
-  const { equippedTheme, equippedEffect } = useAuth();
+  const { equippedTheme } = useAuth();
   const [currentTab, setCurrentTab] = useState<ActiveTab>('quests');
 
   // Level Up Celebration state
@@ -39,7 +39,6 @@ export const DashboardPage: React.FC = () => {
 
   // Dynamic theme background styles based on equipped theme
   const themeBgColor = equippedTheme?.metadata?.bgColor || '#0b1020';
-  const themePrimary = equippedTheme?.metadata?.primaryColor || '#6ee7f9';
 
   return (
     <div
