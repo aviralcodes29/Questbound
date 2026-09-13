@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #0b1020;
+    color: #f1f5f9;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Accessible focus indicators */
+  *:focus-visible {
+    outline: 2px solid #6ee7f9 !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Custom fantasy scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b1020;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1c2642;
+    border-radius: 4px;
+    border: 1px solid #253457;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2c3e66;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle parchment and lunar glows */
+.parchment-texture {
+  background-image: radial-gradient(#1c2642 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.glow-essence {
+  box-shadow: 0 0 25px -4px rgba(110, 231, 249, 0.4);
+}
+
+.glow-gold {
+  box-shadow: 0 0 25px -4px rgba(246, 196, 83, 0.4);
+}
