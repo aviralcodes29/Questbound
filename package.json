@@ -1,0 +1,15 @@
+{
+  "name": "questbound-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Questbound — A fantasy-themed life RPG that turns real-world habits into quests",
+  "scripts": {
+    "dev": "npm --prefix apps/web run dev",
+    "build": "npm --prefix apps/web run build",
+    "preview": "npm --prefix apps/web run preview",
+    "test": "npm --prefix apps/web run test"
+  },
+  "keywords": ["rpg", "gamification", "supabase", "react", "productivity"],
+  "author": "Questbound Team",
+  "license": "MIT"
+}
